@@ -1,0 +1,141 @@
+.bottom-nav {
+  background: white;
+  border-top: 2px solid #DDD;
+  /* bottom: 0;
+  display: flex;
+  height: 48px;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  padding: 6px 0; */
+}
+
+.bottom-nav a {
+  margin-right: 16px;
+}
+
+.top-nav {
+  background: white;
+  border-bottom: 2px solid #DDD;
+  /* height: 48px; */
+  /* padding: 6px 0; */
+  /* position: fixed; */
+  /* width: 100%; */
+  /* z-index: 1000; */
+}
+
+@keyframes about {
+  100% { background-position: -272px; }
+}
+
+@keyframes main-first {
+  100% { background-position: -384px; }
+}
+
+@keyframes main-loop {
+  from {
+    background-position: -384px;
+  } to {
+    background-position: -480px;
+  }
+}
+
+@keyframes commission-first {
+  100% { background-position: -240px; }
+}
+
+@keyframes commission-loop {
+  from {
+    background-position: -240px;
+  } to {
+    background-position: -480px;
+  }
+}
+
+@keyframes contact {
+  from {
+    background-position: -91px;
+  } to {
+    background-position: -455px;
+  }
+}
+
+@keyframes portfolio {
+  from {
+    background-position: -90px;
+  } to {
+    background-position: -630px;
+  }
+}
+
+@keyframes shop {
+  100% { background-position: -1134px; }
+}
+
+.about {
+  background: url("../assets/about-sprites.png") left center;
+  height: 48px;
+  width: 68px;
+}
+
+.about:hover {
+  animation: about 1s steps(4) infinite;
+}
+
+.commission {
+  background: url("../assets/commission-sprites.png") left center;
+  height: 48px;
+  width: 120px;
+}
+
+.commission:hover {
+  animation-name: commission-first, commission-loop;
+  animation-duration: 300ms, 1000ms;
+  animation-delay: 0ms, 300ms;
+  animation-timing-function: steps(2), steps(2);
+  animation-iteration-count: 1, infinite;
+}
+
+.contact {
+  background: url("../assets/contact-sprites.png") left center;
+  height: 48px;
+  width: 91px;
+}
+
+.contact:hover {
+  animation: contact 1.2s steps(4) infinite;
+}
+
+.main {
+  background: url("../assets/main-sprites.png") left center;
+  height: 48px;
+  width: 48px;
+}
+
+.main:hover {
+  animation-name: main-first, main-loop;
+  animation-duration: 1000ms, 1000ms;
+  animation-delay: 0ms, 1000ms;
+  animation-timing-function: steps(8), steps(2);
+  animation-iteration-count: 1, infinite;
+}
+
+.portfolio {
+  background: url("../assets/portfolio-sprites.png") left center;
+  height: 48px;
+  width: 90px;
+}
+
+.portfolio:hover {
+  animation: portfolio 1.2s steps(6) infinite;
+}
+
+.shop {
+  background: url("../assets/shop-sprites.png") left center;
+  height: 48px;
+  width: 54px;
+}
+
+.shop:hover {
+  animation: shop 4s steps(21) infinite;
+}

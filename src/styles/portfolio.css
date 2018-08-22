@@ -1,0 +1,87 @@
+.container-fluid {
+  padding: 0;
+}
+
+.portfolio-image-container {
+  height: 400px;
+  /* width: 20%; */
+  overflow: hidden;
+  /* float: left; */
+}
+
+.portfolio-image {
+  /* display: block; */
+  left: 50%;
+  opacity: 0.65;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  /* width: 100%; */
+}
+
+.portfolio-image:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.portfolio-image-container:nth-of-type(1),
+.portfolio-image-container:nth-of-type(2),
+.portfolio-image-container:nth-of-type(3),
+.portfolio-image-container:nth-of-type(4),
+.portfolio-image-container:nth-of-type(5) {
+  /*margin-top: 14px;*/
+}
+
+.backdrop {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 9998;
+}
+
+.my-modal {
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 80%;
+  left: 50%;
+  /*margin-left: -300px;*/
+  /*margin-top: -200px;*/
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  z-index: 9999;
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+.my-modal img {
+  animation: modal-in 0.2s ease-in 1;
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease-in;
+}
+
+/*.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: yellow;
+}*/
